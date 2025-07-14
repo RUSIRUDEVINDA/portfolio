@@ -31,7 +31,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <p className="text-gray-400 text-sm mb-2">© 2024 John Doe. All rights reserved.</p>
+        <p className="text-gray-400 text-sm mb-2">© 2024 Rusiru Devinda. All rights reserved.</p>
       </div>
     </motion.footer>
   );
