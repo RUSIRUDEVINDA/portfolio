@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Github size={20} />, href: '#', label: 'GitHub' },
-    { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-    { icon: <Twitter size={20} />, href: '#', label: 'Twitter' },
-    { icon: <Mail size={20} />, href: '#', label: 'Email' }
+    { icon: <Github size={20} />, href: 'https://github.com/RUSIRUDEVINDA', label: 'GitHub' },
+    { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/rusiru-devinda', label: 'LinkedIn' },
+
+    { icon: <Mail size={20} />, href: 'mailto:rusirud49@gmail.com', label: 'Email' }
   ];
 
   return (
@@ -26,6 +26,8 @@ const Footer = () => {
               href={link.href}
               aria-label={link.label}
               className="text-gray-400 hover:text-blue-400 transition-colors duration-300 p-2 rounded-lg hover:bg-dark-blue-300/30"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {link.icon}
             </a>
