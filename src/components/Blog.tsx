@@ -19,7 +19,7 @@ const Blog = () => {
   return (
     <motion.section
       id="blog"
-      className="section-padding system-gradient soft-shadow animate-fade-in-up pt-56 relative z-[2]"
+      className="section-padding system-gradient soft-shadow animate-fade-in-up pt-24 pb-12 relative z-[2]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -27,7 +27,7 @@ const Blog = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl modern-title mb-6 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl modern-title mb-4 md:mb-6 leading-normal animate-fade-in-up relative z-20 inline-block pb-1">
             Latest Blog Posts
           </h2>
           <p
