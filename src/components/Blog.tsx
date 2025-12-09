@@ -25,7 +25,7 @@ const Blog = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto mt-32">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl modern-title mb-6 animate-fade-in-up">
             Latest Blog Posts
