@@ -19,7 +19,7 @@ const Blog = () => {
   return (
     <motion.section
       id="blog"
-      className="section-padding system-gradient soft-shadow animate-fade-in-up mt-32" 
+      className="section-padding system-gradient soft-shadow animate-fade-in-up pt-56 relative z-[2]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
