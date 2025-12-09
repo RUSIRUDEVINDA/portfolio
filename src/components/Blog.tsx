@@ -19,19 +19,22 @@ const Blog = () => {
   return (
     <motion.section
       id="blog"
-      className="section-padding system-gradient soft-shadow animate-fade-in-up"
+      className="section-padding system-gradient soft-shadow animate-fade-in-up mt-32" 
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto mt-32">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl modern-title mb-6 animate-fade-in-up">
             Latest Blog Posts
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            Sharing insights, tutorials, and thoughts on web development, 
+          <p
+            className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up"
+            style={{ animationDelay: '0.1s' }}
+          >
+            Sharing insights, tutorials, and thoughts on web development,
             technology trends, and programming best practices
           </p>
         </div>
@@ -49,8 +52,8 @@ const Blog = () => {
                 className="bg-dark-blue-50/50 backdrop-blur-sm border-dark-blue-300/20 overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer soft-shadow"
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={post.image} 
+                  <img
+                    src={post.image}
                     alt={post.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -61,13 +64,13 @@ const Blog = () => {
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-blue-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                
+
                 <CardContent className="p-6">
                   <h3 className="text-xl modern-title mb-3">{post.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center text-gray-400 text-xs mb-4 space-x-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
@@ -78,10 +81,10 @@ const Blog = () => {
                       {post.readTime}
                     </div>
                   </div>
-                  
-                  <Button 
+
+                  <Button
                     asChild
-                    variant="ghost" 
+                    variant="ghost"
                     size="sm"
                     className="text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 p-0 h-auto font-medium group-hover:translate-x-1 transition-transform duration-300"
                   >
@@ -95,7 +98,6 @@ const Blog = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </motion.section>
   );
