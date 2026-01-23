@@ -167,6 +167,12 @@ const About = () => {
         link: ""
       },
       {
+        date: "December 2025",
+        title: "JavaScript Essentials 1",
+        issuer: "Cisco Networking Academy",
+        link: ""
+      },
+      {
         date: "January 2025",
         title: "AI/ML Engineer (Stage 1)",
         issuer: "SLIIT",
