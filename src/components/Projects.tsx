@@ -104,7 +104,7 @@ const Projects = () => {
       ],
       githubLink: "https://github.com/RUSIRUDEVINDA/MERN-E-Book",
       liveLink: "https://mern-e-book-frontend-4onv.onrender.com/",
-      category: "Full Stack",
+      category: "AI Fullstack",
       uiImages: [
         "/images/ebook/hero.png",
         "/images/ebook/features.png",
