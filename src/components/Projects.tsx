@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, X, ArrowRight } from 'lucide-react';
+import { Github, X, ArrowRight, ExternalLink, BookOpen } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { motion } from 'framer-motion';
@@ -45,10 +45,122 @@ const techLogos = {
   'OpenCV (cv2)': 'https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg',
   'YOLOv4-Tiny': 'https://raw.githubusercontent.com/AlexeyAB/darknet/master/build/darknet/x64/data/yolo-logo.png',
   'Haar Cascade Classifiers': 'https://upload.wikimedia.org/wikipedia/commons/2/2d/OpenCV_logo_with_text.png',
+  'Cloudinary': 'https://res.cloudinary.com/demo/image/upload/v1595958801/cloudinary_icon_blue.png',
+  'Hugging Face': 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg',
+  'Mistral AI': 'https://avatars.githubusercontent.com/u/108920935?s=200&v=4',
+  'JWT': 'https://jwt.io/img/pic_logo.svg',
+  'Google Auth': 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
+  'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
+  'Google Gemini': 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg',
 };
 
 const Projects = () => {
   const projects = [
+    {
+      title: "MERN E-Book Creator",
+      date: "January 2026",
+      description: (
+        <div className="space-y-4 text-gray-300">
+          <p>
+            MERN E-Book Creator is a state-of-the-art web application designed to empower authors. By combining the flexibility of the MERN Stack with the intelligence of Mistral AI and Hugging Face, it offers a seamless environment for planning, writing, and publishing eBooks. From intelligent chapter generation to secure cloud storage, every feature is built to provide a premium user experience. I was responsible for building the backend.
+          </p>
+
+          <h5 className="font-bold text-md text-sky-400 pt-2">Key Features:</h5>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">🎨 Frontend Excellence</h6>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li>React + Vite: Blazing fast performance and component-based architecture.</li>
+            <li>Tailwind CSS: Beautiful, responsive, and modern UI design.</li>
+            <li>Rich Text Editor: Integrated markdown support for a distraction-free writing experience.</li>
+            <li>State Management: Efficient data handling for smooth user interactions.</li>
+          </ul>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">⚙️ Backend Powerhouse</h6>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li>Secure Authentication: JWT for stateless sessions and Bcrypt.js for hashing.</li>
+            <li>Cloud Storage: Implemented Cloudinary for optimized eBook cover uploads.</li>
+            <li>RESTful API: Robust structure using Express.js and Node.js.</li>
+            <li>Database: MongoDB with Mongoose for flexible schema design.</li>
+          </ul>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">🧠 Advanced AI Integration</h6>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li>Mistral AI: Generates detailed book outlines and creative chapter content.</li>
+            <li>Hugging Face: Summarization, Keyword Extraction, and Classification.</li>
+          </ul>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">📂 Professional Exports</h6>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li>PDF Generation and DOCX Support for publishing and further formatting.</li>
+          </ul>
+        </div >
+      ),
+      shortDescription: "A powerful, full-stack eBook creation platform utilizing Artificial Intelligence to streamline the writing process.",
+      image: "/images/ebook/dashboardw.png",
+      technologies: [
+        "React", "Node.js", "Tailwind CSS", "MongoDB",
+        "Express.js", "Cloudinary", "Mistral AI",
+        "Hugging Face", "JWT", "Google Auth"
+      ],
+      githubLink: "https://github.com/RUSIRUDEVINDA/MERN-E-Book",
+      liveLink: "https://mern-e-book-frontend-4onv.onrender.com/",
+      category: "Full Stack",
+      uiImages: [
+        "/images/ebook/hero.png",
+        "/images/ebook/features.png",
+        "/images/ebook/loginpage.png",
+        "/images/ebook/dashboard1.png",
+        "/images/ebook/dashboardw.png",
+        "/images/ebook/create1.png",
+        "/images/ebook/create2.png",
+        "/images/ebook/ebookdetails.png",
+        "/images/ebook/viewbook.png",
+        "/images/ebook/edit.png",
+        "/images/ebook/preview.png",
+        "/images/ebook/profile.png",
+        "/images/ebook/testimonials.png"
+      ]
+    },
+    {
+      title: "MarketingGenius AI",
+      date: "January 2026",
+      description: (
+        <div className="space-y-4 text-gray-300">
+          <p>
+            One-click full-stack Generative AI SaaS that instantly creates professional marketing content for small business owners — no prompt engineering required.
+          </p>
+          <h5 className="font-bold text-md text-sky-400 pt-2">What it does in 5 seconds:</h5>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li>3 ready-to-post Facebook posts</li>
+            <li>3 emotional Instagram captions with CTA</li>
+            <li>3 Google Ads (headlines + descriptions)</li>
+            <li>SEO keywords & hashtags</li>
+            <li>Brand tone guide + conversion copy</li>
+            <li>All perfectly tailored to the business</li>
+          </ul>
+        </div>
+      ),
+      shortDescription: "AI-Powered Marketing Kit Generator for Small & Local Businesses.",
+      image: "/images/marketing/1.jpeg",
+      technologies: [
+        "React", "Tailwind CSS", "Vite", "Python",
+        "FastAPI", "Google Gemini", "Google Auth"
+      ],
+      githubLink: "https://github.com/RUSIRUDEVINDA/marketing-genius-ai",
+      category: "AI SaaS",
+      uiImages: [
+        "/images/marketing/1.jpeg",
+        "/images/marketing/2.jpeg",
+        "/images/marketing/3.jpeg",
+        "/images/marketing/4.jpeg",
+        "/images/marketing/5.jpeg",
+        "/images/marketing/6.jpeg",
+        "/images/marketing/7.jpeg",
+        "/images/marketing/8.jpeg",
+        "/images/marketing/9.jpeg",
+        "/images/marketing/10.jpeg"
+      ]
+    },
     {
       title: "Airport Services Management Web Application",
       date: "April 2025 - May 2025",
@@ -83,6 +195,7 @@ const Projects = () => {
       image: "https://i.pinimg.com/736x/cb/68/05/cb680500c160815d3a1bb9a7f522938b.jpg",
       technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'TypeScript', 'Vite'],
       githubLink: 'https://github.com/RUSIRUDEVINDA/aviation-management-system.git',
+      blogLink: 'https://medium.com/@rusirud49/aerox-revolutionizing-the-airport-experience-with-an-all-in-one-digital-management-system-831d148873f0',
       category: "Full Stack",
       uiImages: [
         "/images/home.jpeg",
@@ -268,7 +381,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            A collection of projects that showcase my skills and passion for creating 
+            A collection of projects that showcase my skills and passion for creating
             innovative digital solutions
           </p>
         </div>
@@ -287,8 +400,8 @@ const Projects = () => {
                   className="bg-dark-blue-50/50 backdrop-blur-sm border-dark-blue-300/20 overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer soft-shadow"
                 >
                   <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -299,7 +412,7 @@ const Projects = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6 flex flex-col flex-1">
                     <span className="uppercase tracking-wide text-xs font-bold text-blue-400 mb-2">Featured Project</span>
                     <h3 className="text-xl modern-title mb-1">{project.title}</h3>
@@ -331,6 +444,11 @@ const Projects = () => {
                         if (tech === 'Android Studio') { bg = 'bg-green-700/20'; text = 'text-green-400'; }
                         if (tech === 'Figma') { bg = 'bg-pink-500/20'; text = 'text-pink-400'; }
                         if (tech === 'Spring Boot') { bg = 'bg-green-700/20'; text = 'text-green-400'; }
+                        if (tech === 'Cloudinary') { bg = 'bg-indigo-900/30'; text = 'text-indigo-300'; }
+                        if (tech === 'Hugging Face') { bg = 'bg-yellow-500/20'; text = 'text-yellow-200'; }
+                        if (tech === 'Mistral AI') { bg = 'bg-yellow-600/20'; text = 'text-yellow-400'; }
+                        if (tech === 'JWT') { bg = 'bg-pink-600/20'; text = 'text-pink-400'; }
+                        if (tech === 'Google Auth') { bg = 'bg-gray-200/20'; text = 'text-gray-200'; }
                         return (
                           <span key={tech} className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold border border-white/10 ${bg} ${text}`}>
                             {techLogos[tech] && <img src={techLogos[tech]} alt={tech} className="w-4 h-4 mr-1" />}
@@ -361,28 +479,51 @@ const Projects = () => {
           <DialogHeader className="p-6 pb-4">
             <DialogTitle className="text-2xl modern-title pr-8">{selectedProject?.title}</DialogTitle>
           </DialogHeader>
-          <a
-            href={selectedProject?.githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute top-7 right-16 inline-flex items-center gap-2 text-green-400 font-semibold cursor-pointer hover:underline hover:text-green-300 transition-all text-sm no-underline"
-            style={{ zIndex: 2 }}
-          >
-            <Github className="w-4 h-4" />
-            View on GitHub
-          </a>
+          <div className="absolute top-7 right-16 flex gap-4 items-center" style={{ zIndex: 2 }}>
+            <a
+              href={selectedProject?.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-green-400 font-semibold cursor-pointer hover:underline hover:text-green-300 transition-all text-sm no-underline"
+            >
+              <Github className="w-4 h-4" />
+              GitHub
+            </a>
+            {selectedProject?.liveLink && (
+              <a
+                href={selectedProject?.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sky-400 font-semibold cursor-pointer hover:underline hover:text-sky-300 transition-all text-sm no-underline"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Live Demo
+              </a>
+            )}
+            {selectedProject?.blogLink && (
+              <a
+                href={selectedProject?.blogLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-orange-400 font-semibold cursor-pointer hover:underline hover:text-orange-300 transition-all text-sm no-underline"
+              >
+                <BookOpen className="w-4 h-4" />
+                Blog
+              </a>
+            )}
+          </div>
           <div className="max-h-[80vh] overflow-y-auto p-6 pt-0 space-y-8">
-            
+
             <div>
               <h4 className="font-bold text-lg mb-4 text-sky-400">Description</h4>
               <div className="text-gray-300 text-sm leading-relaxed">{selectedProject?.description}</div>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-lg mb-4 text-sky-400">Technologies</h4>
               <div className={`flex ${selectedProject?.title === 'Real Estate Buy & Sell Mobile App' ? 'justify-center' : 'justify-center'} mb-4`}>
                 {selectedProject?.title === 'Real Estate Buy & Sell Mobile App' ? (
-                  <div className="flex flex-row gap-4 justify-center items-center">
+                  <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
                     {selectedProject.technologies.map(tech => (
                       <div key={tech} className="flex flex-col items-center justify-center bg-white/10 rounded-xl shadow-md p-4 w-32 h-32 mx-auto">
                         {techLogos[tech] && <img src={tech === 'Android Studio' ? 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg' : techLogos[tech]} alt={tech} className="w-10 h-10 object-contain mb-2" />}
@@ -391,9 +532,9 @@ const Projects = () => {
                     ))}
                   </div>
                 ) : (
-                  <div className="flex flex-row justify-center items-center gap-4">
+                  <div className="flex flex-row flex-wrap justify-center items-center gap-4">
                     {selectedProject?.technologies.map(tech => (
-                      <div key={tech} className="flex flex-col items-center justify-center bg-white/10 rounded-xl shadow-md p-4 w-32 h-32 mx-auto">
+                      <div key={tech} className="flex flex-col items-center justify-center bg-white/10 rounded-xl shadow-md p-4 w-32 h-32">
                         {techLogos[tech] && <img src={techLogos[tech]} alt={tech} className="w-10 h-10 object-contain mb-2" />}
                         <span className="text-sm font-semibold text-gray-100 text-center">{tech}</span>
                       </div>
@@ -478,7 +619,7 @@ const Projects = () => {
             {Array.isArray(selectedProject?.uiImages) && selectedProject.uiImages.length > 0 && (
               <div>
                 <h4 className="font-bold text-lg mb-4 text-sky-400">UI Showcase</h4>
-                <Carousel 
+                <Carousel
                   className="w-full relative"
                   opts={{
                     align: "start",
@@ -488,32 +629,32 @@ const Projects = () => {
                   <CarouselContent>
                     {selectedProject?.title === 'Real Estate Buy & Sell Mobile App'
                       ? selectedProject.uiImages.reduce((rows, img, idx) => {
-                          if (idx % 4 === 0) rows.push([]);
-                          rows[rows.length - 1].push(img);
-                          return rows;
-                        }, []).map((imgGroup, i) => (
-                          <CarouselItem key={i}>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-                              {imgGroup.map((img, j) => (
-                                <img 
-                                  key={j}
-                                  src={img} 
-                                  alt={`${selectedProject.title} UI ${i * 4 + j + 1}`} 
-                                  className="rounded-lg object-contain w-full h-full max-h-[75vh]"
-                                />
-                              ))}
-                            </div>
-                          </CarouselItem>
-                        ))
+                        if (idx % 4 === 0) rows.push([]);
+                        rows[rows.length - 1].push(img);
+                        return rows;
+                      }, []).map((imgGroup, i) => (
+                        <CarouselItem key={i}>
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+                            {imgGroup.map((img, j) => (
+                              <img
+                                key={j}
+                                src={img}
+                                alt={`${selectedProject.title} UI ${i * 4 + j + 1}`}
+                                className="rounded-lg object-contain w-full h-full max-h-[75vh]"
+                              />
+                            ))}
+                          </div>
+                        </CarouselItem>
+                      ))
                       : selectedProject.uiImages.map((img, i) => (
-                          <CarouselItem key={i}>
-                            <img
-                              src={img}
-                              alt={`${selectedProject.title} UI ${i + 1}`}
-                              className="rounded-lg object-contain w-full h-full max-h-[75vh]"
-                            />
-                          </CarouselItem>
-                        ))}
+                        <CarouselItem key={i}>
+                          <img
+                            src={img}
+                            alt={`${selectedProject.title} UI ${i + 1}`}
+                            className="rounded-lg object-contain w-full h-full max-h-[75vh]"
+                          />
+                        </CarouselItem>
+                      ))}
                   </CarouselContent>
                   <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-black/30 text-white border-none hover:bg-black/50 transition-all" />
                   <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-black/30 text-white border-none hover:bg-black/50 transition-all" />

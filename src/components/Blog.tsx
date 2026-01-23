@@ -6,13 +6,49 @@ import { motion } from 'framer-motion';
 const Blog = () => {
   const blogPosts = [
     {
+      title: "Password Hashing Explained: How to Secure Passwords with bcrypt in Node.js",
+      excerpt: "Passwords are the first line of defense. Learn why hashing matters and how to securely implement bcrypt in Node.js...",
+      image: "/images/password hashing.jpg",
+      date: "Jan 19, 2026",
+      readTime: "4 min read",
+      category: "Security",
+      url: "https://medium.com/@rusirud49/password-hashing-explained-how-to-secure-passwords-with-bcrypt-in-node-js-7ac49d2c41d9"
+    },
+    {
+      title: "Understanding Kubernetes Architecture",
+      excerpt: "Don't just run kubectl commands. Understand the internal architecture of Kubernetes to build production-grade cloud-native systems...",
+      image: "/images/kubernetes.jpg",
+      date: "Jan 13, 2026",
+      readTime: "4 min read",
+      category: "DevOps",
+      url: "https://medium.com/@rusirud49/understanding-kubernetes-architecture-8bf1cf7de407"
+    },
+    {
+      title: "JSON Web Tokens (JWT): Enhancing Security in Modern Web Authentication",
+      excerpt: "Authentication is about securely proving identity. Explore how JSON Web Tokens (JWT) standardize this across distributed systems...",
+      image: "/images/jwt.jpg",
+      date: "Jan 11, 2026",
+      readTime: "4 min read",
+      category: "Security",
+      url: "https://medium.com/@rusirud49/json-web-tokens-jwt-enhancing-security-in-modern-web-authentication-4f8e8763f87d"
+    },
+    {
+      title: "Unlocking Identity-First Security with WSO2 Asgardeo",
+      excerpt: "Digital identity is the foundation of trust. WSO2 Asgardeo offers a cloud-native IDaaS for easy and powerful identity management...",
+      image: "/images/asgardeo.png",
+      date: "Jan 9, 2026",
+      readTime: "3 min read",
+      category: "Identity",
+      url: "https://medium.com/@rusirud49/unlocking-identity-first-security-with-wso2-asgardeo-e3d649d37dec"
+    },
+    {
       title: "AeroX: Revolutionizing the Airport Experience with an All-in-One Digital Management System",
-      excerpt: "Discover how AeroX transforms airport operations and passenger journeys with a seamless, digital-first platform for real-time services.",
-      image: "https://i.pinimg.com/736x/fc/62/ff/fc62ffc7ad012698a250090a0d49dff8.jpg",
-      date: "July 3rd 2025",
+      excerpt: "Discover how AeroX transforms airport operations and passenger journeys with a seamless, digital-first platform for real-time services...",
+      image: "/images/plane.jpg",
+      date: "Jan 8, 2026",
       readTime: "3 min read",
       category: "Airport Tech",
-      url: "https://wolfjournals.hashnode.dev/aerox-revolutionizing-the-airport-experience-with-an-all-in-one-digital-management-system"
+      url: "https://medium.com/@rusirud49/aerox-revolutionizing-the-airport-experience-with-an-all-in-one-digital-management-system-831d148873f0"
     }
   ];
 
@@ -49,7 +85,7 @@ const Blog = () => {
               transition={{ duration: 0.7, delay: index * 0.1 }}
             >
               <Card
-                className="bg-dark-blue-50/50 backdrop-blur-sm border-dark-blue-300/20 overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer soft-shadow"
+                className="bg-dark-blue-50/50 backdrop-blur-sm border-dark-blue-300/20 overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer soft-shadow h-full flex flex-col"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -65,13 +101,13 @@ const Blog = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-blue-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl modern-title mb-3">{post.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center text-gray-400 text-xs mb-4 space-x-4">
+                  <div className="flex items-center text-gray-400 text-xs mb-4 space-x-4 mt-auto">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       {post.date}
