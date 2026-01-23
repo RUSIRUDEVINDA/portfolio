@@ -24,7 +24,7 @@ const About = () => {
         {/* Left Column: Image */}
         <div className="lg:col-span-1">
           <div className="relative group">
-            <motion.img 
+            <motion.img
               src="/images/profile/profile_image.jpg"
               alt="Profile"
               className="w-full h-auto object-cover rounded-2xl shadow-2xl"
@@ -80,8 +80,8 @@ const About = () => {
                 style={{ backgroundSize: '200% 100%' }}
               >
                 Rusiru Devinda
-              </motion.span>, a passionate Software Engineering undergraduate with a solid foundation in programming, 
-              problem-solving, and full-stack development. Focused on creating clean, user-centered solutions 
+              </motion.span>, a passionate Software Engineering undergraduate with a solid foundation in programming,
+              problem-solving, and full-stack development. Focused on creating clean, user-centered solutions
               that blend intuitive UI/UX with efficient backend architecture.
             </motion.p>
             <motion.p
@@ -90,7 +90,7 @@ const About = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
               }}
             >
-              Always learning and adapting to new tools and technologies, with a collaborative mindset and 
+              Always learning and adapting to new tools and technologies, with a collaborative mindset and
               commitment to delivering practical, high-quality work that improves real-world experiences.
             </motion.p>
           </motion.div>
@@ -116,63 +116,130 @@ const About = () => {
     </motion.div>
   );
 
-  const EducationContent = () => (
-    <motion.div
-      key="education"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-      className="w-full"
-    >
-      <div className="relative border-l-2 border-gray-700 ml-4">
-        <div className="space-y-12">
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">2023 - 2027</p>
-            <h3 className="text-xl modern-title">BSc in Software Engineering</h3>
-            <p className="text-gray-300">University of Srilanka Institute of Information Technology</p>
-          </div>
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">May 2025</p>
-            <h3 className="text-xl modern-title">Fundamentals of DevOps on AWS</h3>
-            <p className="text-gray-300">Simplilearn</p>
-          </div>
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">January 2025</p>
-            <h3 className="text-xl modern-title">AWS Foundations: Machine Learning Basics </h3>
-            <p className="text-gray-300">Simplilearn</p>
-          </div>
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">January 2025</p>
-            <h3 className="text-xl modern-title">Python for beginners</h3>
-            <p className="text-gray-300">Simplilearn</p>
-          </div>
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">January 2025</p>
-            <h3 className="text-xl modern-title">Learning Data Science: Understanding the basics</h3>
-            <p className="text-gray-300">LinkedIn Learning</p>
-          </div>
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">January 2025</p>
-            <h3 className="text-xl modern-title">MongoDB Fundamentals</h3>
-            <p className="text-gray-300">MongoDB University</p>
-          </div>
-          <div className="pl-8 relative">
-            <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
-            <p className="text-sm text-gray-400 mb-1">January 2024</p>
-            <h3 className="text-xl modern-title">Introduction to SQL</h3>
-            <p className="text-gray-300">Sololearn</p>
+  const EducationContent = () => {
+    const educationData = [
+      {
+        date: "2023 - 2027",
+        title: "BSc in Software Engineering",
+        issuer: "University of Srilanka Institute of Information Technology",
+        link: ""
+      },
+      {
+        date: "May 2025",
+        title: "Software Engineering Intern Certificate",
+        issuer: "HackerRank",
+        link: "https://www.hackerrank.com/certificates/e79926be0fd8"
+      },
+      {
+        date: "May 2025",
+        title: "Postman API Fundamentals Student Expert",
+        issuer: "Postman",
+        link: "https://api.badgr.io/public/assertions/SwDaLw3mTRGiD296O96CjQ"
+      },
+      {
+        date: "May 2025",
+        title: "Fundamentals of DevOps on AWS",
+        issuer: "Simplilearn",
+        link: ""
+      },
+      {
+        date: "January 2025",
+        title: "AWS Foundations: Machine Learning Basics",
+        issuer: "Simplilearn",
+        link: ""
+      },
+      {
+        date: "January 2025",
+        title: "Python for beginners",
+        issuer: "Simplilearn",
+        link: ""
+      },
+      {
+        date: "January 2025",
+        title: "Learning Data Science: Understanding the basics",
+        issuer: "LinkedIn Learning",
+        link: ""
+      },
+      {
+        date: "January 2025",
+        title: "MongoDB Fundamentals",
+        issuer: "MongoDB University",
+        link: ""
+      },
+      {
+        date: "January 2025",
+        title: "AI/ML Engineer (Stage 1)",
+        issuer: "SLIIT",
+        link: "https://code.sliit.org/certificates/euxb1q0hda"
+      },
+      {
+        date: "January 2025",
+        title: "MongoDB and the Document Model",
+        issuer: "MongoDB",
+        link: "https://learn.mongodb.com/c/d6OG4p5zSYeqbfh5d2Ux7g"
+      },
+      {
+        date: "January 2025",
+        title: "Node (Basic) Certificate",
+        issuer: "HackerRank",
+        link: "https://www.hackerrank.com/certificates/2a91eace5062"
+      },
+      {
+        date: "January 2025",
+        title: "Java Intermediate",
+        issuer: "Sololearn",
+        link: "https://www.sololearn.com/en/certificates/CC-XKRZJGNI"
+      },
+      {
+        date: "January 2024",
+        title: "Introduction to SQL",
+        issuer: "Sololearn",
+        link: ""
+      },
+      {
+        date: "2024",
+        title: "Web Design for beginners",
+        issuer: "University of Moratuwa",
+        link: "https://open.uom.lk/verify"
+      }
+    ];
+
+    return (
+      <motion.div
+        key="education"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.3 }}
+        className="w-full"
+      >
+        <div className="relative border-l-2 border-gray-700 ml-4">
+          <div className="space-y-12">
+            {educationData.map((item, index) => (
+              <div key={index} className="pl-8 relative">
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-sky-500 rounded-full border-4 border-dark-blue-300"></div>
+                <p className="text-sm text-gray-400 mb-1">{item.date}</p>
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-sky-400 transition-colors inline-flex items-center gap-2 group"
+                  >
+                    <h3 className="text-xl modern-title group-hover:text-inherit">{item.title}</h3>
+                    <BookOpen className="w-4 h-4 text-gray-500 group-hover:text-sky-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  </a>
+                ) : (
+                  <h3 className="text-xl modern-title">{item.title}</h3>
+                )}
+                <p className="text-gray-300">{item.issuer}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </motion.div>
-  );
+      </motion.div>
+    );
+  };
 
   return (
     <motion.section
@@ -184,7 +251,7 @@ const About = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-6xl mx-auto">
-        
+
         <div className="text-center mb-8">
           <h2 className="text-4xl modern-title">About Me</h2>
         </div>
@@ -194,9 +261,8 @@ const About = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`${
-                activeTab === tab.id ? 'text-sky-400' : 'text-gray-400 hover:text-white'
-              } flex items-center text-lg font-medium px-5 py-3 transition-colors relative`}
+              className={`${activeTab === tab.id ? 'text-sky-400' : 'text-gray-400 hover:text-white'
+                } flex items-center text-lg font-medium px-5 py-3 transition-colors relative`}
             >
               {tab.icon}
               {tab.label}
