@@ -58,7 +58,7 @@ const Blog = () => {
       className="section-padding system-gradient soft-shadow animate-fade-in-up pt-24 pb-12 relative z-[2]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-7xl mx-auto">
@@ -81,7 +81,7 @@ const Blog = () => {
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.7, delay: index * 0.1 }}
             >
               <Card
