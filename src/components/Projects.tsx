@@ -52,6 +52,8 @@ const techLogos = {
   'Google Auth': 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
   'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
   'Google Gemini': 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg',
+  'Upstash': 'https://avatars.githubusercontent.com/u/41551930?s=200&v=4',
+  'Redis': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
 };
 
 const Projects = () => {
@@ -321,6 +323,50 @@ const Projects = () => {
       ]
     },
     {
+      title: "Real-Time Chat Application",
+      date: "January 2026",
+      description: (
+        <div className="space-y-4 text-gray-300">
+          <p>
+            A high-performance, secure, and ephemeral chat platform featuring a split architecture with a Next.js Frontend and a Node.js/Socket.io Backend. Designed for total privacy with anonymous identities and self-destructing rooms.
+          </p>
+
+          <h5 className="font-bold text-md text-sky-400 pt-2">Key Features:</h5>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">🕵️ Anonymous Proxy</h6>
+          <p className="text-gray-400 pl-4">Interactive terminal-style identity assignment using unique "Animal Identities".</p>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">⏳ Live Countdown</h6>
+          <p className="text-gray-400 pl-4">Visual real-time indicator using Redis's native EXPIRE command for 10-minute self-destruction.</p>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">🔒 Privacy First</h6>
+          <p className="text-gray-400 pl-4">Built-in middleware to prevent third-party eavesdropping and ensure 2-user privacy.</p>
+
+          <h6 className="font-semibold text-sm text-blue-300 pt-1">💻 Cyber-Terminal UI</h6>
+          <p className="text-gray-400 pl-4">Premium aesthetic with Tailwind CSS v4, including scanlines, flicker, and grid backgrounds.</p>
+
+          <h5 className="font-bold text-md text-sky-400 pt-2">Technical Architecture:</h5>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li><strong>Frontend:</strong> Next.js 15+ for UI/UX and socket.io-client management.</li>
+            <li><strong>Backend:</strong> Node.js & Express with Socket.io for bidirectional communication.</li>
+            <li><strong>Database:</strong> Upstash Redis for global TTL and stateless persistence.</li>
+          </ul>
+        </div>
+      ),
+      shortDescription: "A secure, ephemeral chat platform with a premium cyber-terminal aesthetic and self-destructing rooms.",
+      image: "/images/chat-app/image1.png",
+      technologies: [
+        "Next.js", "Node.js", "Socket.io", "Tailwind CSS",
+        "Upstash", "Redis"
+      ],
+      githubLink: "https://github.com/RUSIRUDEVINDA/Real-Time-Chat-App",
+      category: "Full Stack",
+      uiImages: [
+        "/images/chat-app/image1.png",
+        "/images/chat-app/image2.png"
+      ]
+    },
+    {
       title: "OpenCV Realtime Object Detector",
       date: "July 2025",
       description: (
@@ -449,6 +495,8 @@ const Projects = () => {
                         if (tech === 'Mistral AI') { bg = 'bg-yellow-600/20'; text = 'text-yellow-400'; }
                         if (tech === 'JWT') { bg = 'bg-pink-600/20'; text = 'text-pink-400'; }
                         if (tech === 'Google Auth') { bg = 'bg-gray-200/20'; text = 'text-gray-200'; }
+                        if (tech === 'Upstash') { bg = 'bg-emerald-600/20'; text = 'text-emerald-400'; }
+                        if (tech === 'Redis') { bg = 'bg-red-600/20'; text = 'text-red-400'; }
                         return (
                           <span key={tech} className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold border border-white/10 ${bg} ${text}`}>
                             {techLogos[tech] && <img src={techLogos[tech]} alt={tech} className="w-4 h-4 mr-1" />}
