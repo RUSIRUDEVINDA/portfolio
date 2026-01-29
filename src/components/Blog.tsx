@@ -11,7 +11,7 @@ const Blog = () => {
       image: "/images/solid.png",
       date: "Jan 26, 2026",
       readTime: "5 min read",
-      category: "Java",
+      category: "Concepts",
       url: "https://medium.com/@rusirud49/solid-principles-explained-with-complete-java-examples-violations-refactoring-c634662dda49"
     },
     {
