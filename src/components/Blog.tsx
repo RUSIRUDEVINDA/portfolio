@@ -6,6 +6,15 @@ import { motion } from 'framer-motion';
 const Blog = () => {
   const blogPosts = [
     {
+      title: "SOLID Principles Explained with Complete Java Examples (Violations + Refactoring)",
+      excerpt: "Mastering SOLID principles is essential for writing clean, maintainable, and scalable Java code. Explore practical examples of design violations and refactoring techniques to level up your software architecture.",
+      image: "/images/solid.png",
+      date: "Jan 26, 2026",
+      readTime: "5 min read",
+      category: "Java",
+      url: "https://medium.com/@rusirud49/solid-principles-explained-with-complete-java-examples-violations-refactoring-c634662dda49"
+    },
+    {
       title: "Password Hashing Explained: How to Secure Passwords with bcrypt in Node.js",
       excerpt: "Passwords are the first line of defense. Learn why hashing matters and how to securely implement bcrypt in Node.js...",
       image: "/images/password hashing.jpg",
