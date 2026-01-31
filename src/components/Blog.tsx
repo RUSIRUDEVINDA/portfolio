@@ -6,6 +6,15 @@ import { motion } from 'framer-motion';
 const Blog = () => {
   const blogPosts = [
     {
+      title: "Software Architecture: An Overview of Structure, Decisions, and Evolution",
+      excerpt: "Software architecture is often described in simple terms — a blueprint, a roadmap, or a high-level plan for building software systems. Explore the full scope and complexity of what architecture truly represents.",
+      image: "/images/software-architecture.png",
+      date: "Jan 30, 2026",
+      readTime: "4 min read",
+      category: "Architecture",
+      url: "https://medium.com/@rusirud49/software-architecture-an-overview-of-structure-decisions-and-evolution-9229cd1b6023"
+    },
+    {
       title: "SOLID Principles Explained with Complete Java Examples (Violations + Refactoring)",
       excerpt: "Mastering SOLID principles is essential for writing clean, maintainable, and scalable Java code. Explore practical examples of design violations and refactoring techniques to level up your software architecture.",
       image: "/images/solid.png",
