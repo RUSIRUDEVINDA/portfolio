@@ -148,7 +148,7 @@ const Projects = () => {
         "React", "Tailwind CSS", "Vite", "Python",
         "FastAPI", "Google Gemini", "Google Auth"
       ],
-      githubLink: "https://github.com/RUSIRUDEVINDA/marketing-genius-ai",
+      githubLink: "https://github.com/RUSIRUDEVINDA/MarketingGenius-AI",
       category: "AI SaaS",
       uiImages: [
         "/images/marketing/1.jpeg",
