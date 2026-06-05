@@ -87,7 +87,7 @@ const Projects = () => {
             <li><strong>Patient Service:</strong> Manages patient profiles, medical records, and health data.</li>
             <li><strong>Doctor Service:</strong> Handles doctor profiles, specializations, and availability management.</li>
             <li><strong>Appointment Service:</strong> Handles schedule configurations, slot selection, and booking lifecycles.</li>
-            <li><strong>Payment Service:</strong> Performs automated billing and refund transactions integrating PayHere APIs.</li>
+            <li><strong>Payment Service:</strong> Performs billing transactions for booking appointments integrating PayHere APIs.</li>
             <li><strong>Telemedicine Service:</strong> Enables real-time virtual consultations between patients and doctors.</li>
             <li><strong>File Storage Service:</strong> Manages secure upload, storage, and retrieval of medical documents.</li>
             <li><strong>AI Symptom Checking:</strong> Provides intelligent symptom analysis and preliminary health assessments.</li>
@@ -428,7 +428,7 @@ const Projects = () => {
             <ul className="pl-8 list-disc text-gray-400">
               <li>YOLOv4-Tiny for multi-object detection using the COCO dataset.</li>
               <li>Haar Cascade for rapid face detection.</li>
-              </ul>
+            </ul>
             <li>Displays bounding boxes with class labels.</li>
             <li>Optimized for fast performance on machines without GPU.</li>
             <li>Clean and interactive Jupyter Notebook implementation.</li>
@@ -723,9 +723,9 @@ const Projects = () => {
               <div>
                 <h4 className="font-bold text-lg mb-4 text-sky-400">Video Demonstration</h4>
                 <div className="w-full flex justify-center rounded-xl overflow-hidden border border-white/10 bg-black/40 p-2 shadow-2xl">
-                  <video 
-                    src={selectedProject.video} 
-                    controls 
+                  <video
+                    src={selectedProject.video}
+                    controls
                     muted
                     autoPlay
                     ref={(el) => { if (el) el.playbackRate = 2; }}
