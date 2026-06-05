@@ -54,10 +54,87 @@ const techLogos = {
   'Google Gemini': 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg',
   'Upstash': 'https://avatars.githubusercontent.com/u/41551930?s=200&v=4',
   'Redis': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
+  'Go (Golang)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg',
+  Gin: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg',
+  PostgreSQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+  RabbitMQ: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg',
+  Docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+  Kubernetes: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg',
+  Nginx: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
+  Ngrok: 'https://cdn.simpleicons.org/ngrok/white',
 };
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Cloud Native Healthcare Platform",
+      date: "May 2026",
+      description: (
+        <div className="space-y-4 text-gray-300">
+          <p>
+            Designed and developed a highly scalable, fault-tolerant microservices-based healthcare platform using Go (Golang) and the Gin web framework. The system is designed to provide secure, real-time medical services across decoupled systems, leveraging enterprise integration patterns and cloud-native practices.
+          </p>
+          <h5 className="font-bold text-md text-sky-400 pt-2">Key Architectural Contributions:</h5>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li><strong>Service Isolation:</strong> Implemented a database-per-service architecture using independent PostgreSQL instances, ensuring high data isolation and preventing service tight-coupling.</li>
+            <li><strong>Event-Driven Communication:</strong> Utilized RabbitMQ message broker for asynchronous event dispatching (e.g., automatically issuing PayHere payment refunds when a physician initiates appointment cancellations).</li>
+            <li><strong>Robust Security & RBAC:</strong> Developed custom auth middleware with stateless JWT authentication and granular Role-Based Access Control (RBAC) supporting Patients, Doctors, Admins, and Support staff.</li>
+            <li><strong>Containerization & Orchestration:</strong> Used Docker to containerize services for environment portability, routed external traffic using Nginx API Gateway, and prepared configuration templates for Kubernetes deployment.</li>
+          </ul>
+          <h5 className="font-bold text-md text-sky-400 pt-2">Microservices Breakdown:</h5>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li><strong>Auth Service:</strong> Handles authentication, Bcrypt password hashing, and role issuance.</li>
+            <li><strong>Patient Service:</strong> Manages patient profiles, medical records, and health data.</li>
+            <li><strong>Doctor Service:</strong> Handles doctor profiles, specializations, and availability management.</li>
+            <li><strong>Appointment Service:</strong> Handles schedule configurations, slot selection, and booking lifecycles.</li>
+            <li><strong>Payment Service:</strong> Performs automated billing and refund transactions integrating PayHere APIs.</li>
+            <li><strong>Telemedicine Service:</strong> Enables real-time virtual consultations between patients and doctors.</li>
+            <li><strong>File Storage Service:</strong> Manages secure upload, storage, and retrieval of medical documents.</li>
+            <li><strong>AI Symptom Checking:</strong> Provides intelligent symptom analysis and preliminary health assessments.</li>
+            <li><strong>API Gateway:</strong> Central entry point for routing, load balancing, and request authentication.</li>
+            <li><strong>Admin Service:</strong> Powers system configuration, user management, and performance metrics.</li>
+            <li><strong>Notifications Service:</strong> Handles email, SMS, and in-app notification dispatching across services.</li>
+          </ul>
+        </div>
+      ),
+      shortDescription: "A distributed microservices-based healthcare platform built with Go, PostgreSQL, RabbitMQ, and Docker.",
+      image: "/images/health.png",
+      video: "/images/SE-114-Healthcare_platform_video.mp4",
+      technologies: ["Go (Golang)", "PostgreSQL", "RabbitMQ", "Docker", "Kubernetes", "Nginx", "JWT", "React", "TypeScript"],
+      githubLink: "https://github.com/RUSIRUDEVINDA/healthcare-platform-backend",
+      category: "Microservices",
+    },
+    {
+      title: "Life-On-Land",
+      date: "March 2026",
+      description: (
+        <div className="space-y-4 text-gray-300">
+          <p>
+            Life-On-Land is a state-of-the-art Poaching Alert and Wildlife Movement Tracking system designed to protect biodiversity. It provides a highly scalable backend for real-time wildlife monitoring, ranger coordination, and proactive threat detection.
+          </p>
+          <h5 className="font-bold text-md text-sky-400 pt-2">Key Features:</h5>
+          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
+            <li>🛰️ <strong>Real-time GPS Tracking:</strong> High-throughput ingestion of animal movement data via IoT devices.</li>
+            <li>🚨 <strong>Automated Alert System:</strong> Immediate notification triggers for poaching incidents and boundary breaches.</li>
+            <li>🛡️ <strong>Advanced Patrol Management:</strong> Dynamic scheduling, geo-fenced check-ins, and digital logbooks for rangers.</li>
+            <li>📈 <strong>Risk Mapping:</strong> Heatmap-based risk assessment utilizing historical incident and movement data.</li>
+            <li>🔒 <strong>RBAC Security:</strong> Granular Role-Based Access Control (ADMIN, RANGER).</li>
+            <li>🧬 <strong>Data Integrity:</strong> Robust validation and sanitization for all incoming data streams.</li>
+          </ul>
+        </div>
+      ),
+      shortDescription: "A state-of-the-art poaching alert and wildlife movement tracking MERN stack application designed to protect biodiversity.",
+      image: "/images/wild1.png",
+      technologies: ["MongoDB", "Express.js", "React", "Node.js", "Socket.io", "JWT"],
+      githubLink: "https://github.com/RUSIRUDEVINDA/Life-On-Land",
+      liveLink: "https://life-on-land-frontend.vercel.app/",
+      category: "Full Stack",
+      uiImages: [
+        "/images/wild1.png",
+        "/images/wild2.png",
+        "/images/wild3.png"
+      ]
+    },
     {
       title: "MERN E-Book Creator",
       date: "January 2026",
@@ -293,36 +370,6 @@ const Projects = () => {
       category: "Machine Learning"
     },
     {
-      title: "Employee Management System",
-      date: "June 2025",
-      description: (
-        <div className="space-y-4 text-gray-300">
-          <p>
-            Developed a Full-Stack Employee Management System to efficiently manage employee data and streamline organizational operations. The system features a React.js frontend for a dynamic and responsive user interface, and a Spring Boot backend that powers secure, scalable RESTful APIs. A MySQL database supports robust data storage and management. The project emphasizes clean architecture, modular code, and a seamless user experience.
-          </p>
-          <h5 className="font-bold text-md text-sky-400 pt-2">Key Features:</h5>
-          <ul className="list-disc list-inside pl-4 space-y-1 text-gray-400">
-            <li>Developed a responsive, user-friendly UI using React.js for smooth navigation and a modern look.</li>
-            <li>Implemented secure RESTful APIs with Spring Boot for reliable client-server communication.</li>
-            <li>Designed and managed efficient MySQL database schemas to handle employee data operations like CRUD.</li>
-            <li>Created modular and reusable React components to improve scalability and maintainability.</li>
-            <li>Applied best practices in clean architecture for better code structure and separation of concerns.</li>
-            <li>Ensured cross-device compatibility with a mobile-friendly, responsive design.</li>
-          </ul>
-        </div>
-      ),
-      shortDescription: "A full-stack system for efficient employee data management.",
-      image: "/images/employee.jpg",
-      technologies: ["React.js", "Spring Boot", "MySQL"],
-      githubLink: "https://github.com/RUSIRUDEVINDA/employee_management_system",
-      category: "Full Stack",
-      uiImages: [
-        "/images/employee/login.jpg",
-        "/images/employee/dashboard.jpg",
-        "/images/employee/add.jpg"
-      ]
-    },
-    {
       title: "Real-Time Chat Application",
       date: "January 2026",
       description: (
@@ -381,7 +428,7 @@ const Projects = () => {
             <ul className="pl-8 list-disc text-gray-400">
               <li>YOLOv4-Tiny for multi-object detection using the COCO dataset.</li>
               <li>Haar Cascade for rapid face detection.</li>
-            </ul>
+              </ul>
             <li>Displays bounding boxes with class labels.</li>
             <li>Optimized for fast performance on machines without GPU.</li>
             <li>Clean and interactive Jupyter Notebook implementation.</li>
@@ -497,6 +544,14 @@ const Projects = () => {
                         if (tech === 'Google Auth') { bg = 'bg-gray-200/20'; text = 'text-gray-200'; }
                         if (tech === 'Upstash') { bg = 'bg-emerald-600/20'; text = 'text-emerald-400'; }
                         if (tech === 'Redis') { bg = 'bg-red-600/20'; text = 'text-red-400'; }
+                        if (tech === 'Go (Golang)') { bg = 'bg-cyan-500/20'; text = 'text-cyan-400'; }
+                        if (tech === 'Gin') { bg = 'bg-cyan-600/20'; text = 'text-cyan-300'; }
+                        if (tech === 'PostgreSQL') { bg = 'bg-blue-600/20'; text = 'text-blue-300'; }
+                        if (tech === 'RabbitMQ') { bg = 'bg-orange-600/20'; text = 'text-orange-400'; }
+                        if (tech === 'Docker') { bg = 'bg-blue-500/20'; text = 'text-blue-400'; }
+                        if (tech === 'Kubernetes') { bg = 'bg-blue-700/20'; text = 'text-blue-300'; }
+                        if (tech === 'Nginx') { bg = 'bg-green-600/20'; text = 'text-green-400'; }
+                        if (tech === 'Ngrok') { bg = 'bg-indigo-600/20'; text = 'text-indigo-400'; }
                         return (
                           <span key={tech} className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold border border-white/10 ${bg} ${text}`}>
                             {techLogos[tech] && <img src={techLogos[tech]} alt={tech} className="w-4 h-4 mr-1" />}
@@ -664,7 +719,21 @@ const Projects = () => {
               )}
             </div>
 
-            {Array.isArray(selectedProject?.uiImages) && selectedProject.uiImages.length > 0 && (
+            {selectedProject?.video ? (
+              <div>
+                <h4 className="font-bold text-lg mb-4 text-sky-400">Video Demonstration</h4>
+                <div className="w-full flex justify-center rounded-xl overflow-hidden border border-white/10 bg-black/40 p-2 shadow-2xl">
+                  <video 
+                    src={selectedProject.video} 
+                    controls 
+                    muted
+                    autoPlay
+                    ref={(el) => { if (el) el.playbackRate = 2; }}
+                    className="w-full max-h-[60vh] object-contain rounded-lg"
+                  />
+                </div>
+              </div>
+            ) : Array.isArray(selectedProject?.uiImages) && selectedProject.uiImages.length > 0 ? (
               <div>
                 <h4 className="font-bold text-lg mb-4 text-sky-400">UI Showcase</h4>
                 <Carousel
@@ -708,7 +777,7 @@ const Projects = () => {
                   <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-black/30 text-white border-none hover:bg-black/50 transition-all" />
                 </Carousel>
               </div>
-            )}
+            ) : null}
 
             {selectedProject?.title === 'ML-Based Sentiment Analysis System' && (
               <div className="w-full flex flex-col items-start mt-8">

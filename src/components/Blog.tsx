@@ -6,6 +6,24 @@ import { motion } from 'framer-motion';
 const Blog = () => {
   const blogPosts = [
     {
+      title: "Why Go Is Becoming a Dominant Language for Modern Backend Engineering",
+      excerpt: "Explore the features that make Go the language of choice for cloud-native backend systems, including concurrency models, memory efficiency, and rapid compilation.",
+      image: "/images/go.png",
+      date: "May 26, 2026",
+      readTime: "6 min read",
+      category: "Backend",
+      url: "https://medium.com/@rusirud49/why-go-is-becoming-a-dominant-language-for-modern-backend-engineering-0af8e95036e0"
+    },
+    {
+      title: "How Node.js Works: The Power of the Single-Threaded Model",
+      excerpt: "Node.js is famous for its performance, but how does its single-threaded architecture handle thousands of concurrent requests? Discover the inner workings of the Event Loop and Libuv.",
+      image: "/images/node.png",
+      date: "Feb 4, 2026",
+      readTime: "7 min read",
+      category: "Backend",
+      url: "https://medium.com/@rusirud49/how-node-js-works-the-power-of-the-single-threaded-model-99cf15648b51"
+    },
+    {
       title: "Software Architecture: An Overview of Structure, Decisions, and Evolution",
       excerpt: "Software architecture is often described in simple terms — a blueprint, a roadmap, or a high-level plan for building software systems. Explore the full scope and complexity of what architecture truly represents.",
       image: "/images/software-architecture.png",

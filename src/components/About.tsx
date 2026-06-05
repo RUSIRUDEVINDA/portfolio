@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Download, BookOpen, User } from 'lucide-react';
+import { Download, BookOpen, User, Briefcase } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,6 +8,7 @@ const About = () => {
 
   const tabs = [
     { id: 'about', label: 'About', icon: <User className="w-4 h-4 mr-2" /> },
+    { id: 'experience', label: 'Work Experience', icon: <Briefcase className="w-4 h-4 mr-2" /> },
     { id: 'education', label: 'Education & Certificates', icon: <BookOpen className="w-4 h-4 mr-2" /> },
   ];
 
@@ -115,6 +116,42 @@ const About = () => {
       </div>
     </motion.div>
   );
+
+  const ExperienceContent = () => {
+    const experienceData = [
+      {
+        date: "Feb 2026 - Present",
+        title: "Trainee Software Developer",
+        company: "DDS Techvira",
+        description: "Contributing to software development projects, focusing on building scalable and efficient solutions while learning industry best practices and modern technologies."
+      }
+    ];
+
+    return (
+      <motion.div
+        key="experience"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.3 }}
+        className="w-full"
+      >
+        <div className="relative border-l-2 border-gray-700 ml-4">
+          <div className="space-y-12">
+            {experienceData.map((item, index) => (
+              <div key={index} className="pl-8 relative">
+                <div className="absolute -left-[11px] top-1 w-5 h-5 bg-green-500 rounded-full border-4 border-dark-blue-300"></div>
+                <p className="text-sm text-gray-400 mb-1">{item.date}</p>
+                <h3 className="text-xl modern-title">{item.title}</h3>
+                <p className="text-sky-400 font-medium mb-2">{item.company}</p>
+                <p className="text-gray-300 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
 
   const EducationContent = () => {
     const educationData = [
@@ -247,6 +284,19 @@ const About = () => {
     );
   };
 
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'about':
+        return <AboutContent />;
+      case 'experience':
+        return <ExperienceContent />;
+      case 'education':
+        return <EducationContent />;
+      default:
+        return <AboutContent />;
+    }
+  };
+
   return (
     <motion.section
       id="about"
@@ -262,13 +312,13 @@ const About = () => {
           <h2 className="text-4xl modern-title">About Me</h2>
         </div>
 
-        <div className="flex justify-center border-b border-gray-700 mb-10">
+        <div className="flex justify-center border-b border-gray-700 mb-10 overflow-x-auto whitespace-nowrap scrollbar-hide">
           {tabs.map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`${activeTab === tab.id ? 'text-sky-400' : 'text-gray-400 hover:text-white'
-                } flex items-center text-lg font-medium px-5 py-3 transition-colors relative`}
+                } flex items-center text-lg font-medium px-5 py-3 transition-colors relative shrink-0`}
             >
               {tab.icon}
               {tab.label}
@@ -284,7 +334,7 @@ const About = () => {
 
         <div className="p-8 bg-dark-blue-300/20 rounded-3xl border border-sky-500/10 min-h-[400px] flex items-center justify-center">
           <AnimatePresence mode="wait">
-            {activeTab === 'about' ? <AboutContent /> : <EducationContent />}
+            {renderContent()}
           </AnimatePresence>
         </div>
       </div>
